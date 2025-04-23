@@ -1,0 +1,16 @@
+\begin{theindex}
+
+  \item {Cipher}, \hyperpage{7}
+    \subitem {cipher}, \hyperpage{7}
+    \subitem {decipher}, \hyperpage{8}
+  \item {cipher}
+    \subitem {Cipher}, \hyperpage{7}
+  \item {Cipher.h}, \hyperpage{11}
+  \item {cipher\_error}, \hyperpage{8}
+
+  \indexspace
+
+  \item {decipher}
+    \subitem {Cipher}, \hyperpage{8}
+
+\end{theindex}
