@@ -1,0 +1,96 @@
+\hypertarget{classmodAlphaCipher}{}\doxysection{Класс mod\+Alpha\+Cipher}
+\label{classmodAlphaCipher}\index{modAlphaCipher@{modAlphaCipher}}
+
+
+Шифрование методом Гронсфельда  
+
+
+
+
+{\ttfamily \#include $<$mod\+Alpha\+Cipher.\+h$>$}
+
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmodAlphaCipher_a4f0a86c20f5d836f66cb1e640d875e6b}\label{classmodAlphaCipher_a4f0a86c20f5d836f66cb1e640d875e6b}} 
+\mbox{\hyperlink{classmodAlphaCipher_a4f0a86c20f5d836f66cb1e640d875e6b}{mod\+Alpha\+Cipher}} ()=delete
+\begin{DoxyCompactList}\small\item\em Конструктор без параметров \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmodAlphaCipher_a5e2b42f76c91038870412d0b14d31544}\label{classmodAlphaCipher_a5e2b42f76c91038870412d0b14d31544}} 
+\mbox{\hyperlink{classmodAlphaCipher_a5e2b42f76c91038870412d0b14d31544}{mod\+Alpha\+Cipher}} (const wstring \&skey)
+\begin{DoxyCompactList}\small\item\em Конструктор для установки ключа \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmodAlphaCipher_ad540be3199da225a63a9589ca62347ce}\label{classmodAlphaCipher_ad540be3199da225a63a9589ca62347ce}} 
+wstring \mbox{\hyperlink{classmodAlphaCipher_ad540be3199da225a63a9589ca62347ce}{encrypt}} (const wstring \&open\+\_\+text)
+\begin{DoxyCompactList}\small\item\em Зашифрование \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmodAlphaCipher_ae7880f197cbe27f8659455cc4c9020fb}\label{classmodAlphaCipher_ae7880f197cbe27f8659455cc4c9020fb}} 
+wstring \mbox{\hyperlink{classmodAlphaCipher_ae7880f197cbe27f8659455cc4c9020fb}{decrypt}} (const wstring \&cipher\+\_\+text)
+\begin{DoxyCompactList}\small\item\em Расшифрование \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Закрытые члены}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ int $>$ \mbox{\hyperlink{classmodAlphaCipher_a354d69bb0e6035f1970be6b559cd9c19}{convert}} (const wstring \&s)
+\begin{DoxyCompactList}\small\item\em Преобразование строки в вектор \end{DoxyCompactList}\item 
+wstring \mbox{\hyperlink{classmodAlphaCipher_a247b687296399baaa09f96ce43def048}{convert}} (const vector$<$ int $>$ \&v)
+\begin{DoxyCompactList}\small\item\em Преобразование вектора в строку \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmodAlphaCipher_a933e9cb5f15a67a15522d2ff1163f2d0}\label{classmodAlphaCipher_a933e9cb5f15a67a15522d2ff1163f2d0}} 
+wstring {\bfseries get\+Valid\+Key} (const wstring \&in)
+\item 
+\mbox{\Hypertarget{classmodAlphaCipher_a6ffb99c5bfd422c83628b311cd0797d1}\label{classmodAlphaCipher_a6ffb99c5bfd422c83628b311cd0797d1}} 
+wstring {\bfseries get\+Valid\+Open\+Text} (const wstring \&in)
+\item 
+\mbox{\Hypertarget{classmodAlphaCipher_aeac1e715bec4f2b094eed6ca287de176}\label{classmodAlphaCipher_aeac1e715bec4f2b094eed6ca287de176}} 
+wstring {\bfseries get\+Valid\+Cipher\+Text} (const wstring \&in)
+\end{DoxyCompactItemize}
+\doxysubsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmodAlphaCipher_a9f83731ae4d58df14e1df3bd089d7501}\label{classmodAlphaCipher_a9f83731ae4d58df14e1df3bd089d7501}} 
+wstring \mbox{\hyperlink{classmodAlphaCipher_a9f83731ae4d58df14e1df3bd089d7501}{num\+Alpha}} = L\char`\"{}АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЬЫЪЭЮЯ\char`\"{}
+\begin{DoxyCompactList}\small\item\em Русский алфавит \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmodAlphaCipher_ace08758022c05ba498735fd1494254f7}\label{classmodAlphaCipher_ace08758022c05ba498735fd1494254f7}} 
+map$<$ wchar\+\_\+t, int $>$ \mbox{\hyperlink{classmodAlphaCipher_ace08758022c05ba498735fd1494254f7}{alpha\+Num}}
+\begin{DoxyCompactList}\small\item\em Ассоциативный массив \char`\"{}номер по символу\char`\"{}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmodAlphaCipher_a318efb0cdcd8bc0c084097e175c2006b}\label{classmodAlphaCipher_a318efb0cdcd8bc0c084097e175c2006b}} 
+vector$<$ int $>$ \mbox{\hyperlink{classmodAlphaCipher_a318efb0cdcd8bc0c084097e175c2006b}{key}}
+\begin{DoxyCompactList}\small\item\em Ключ \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Шифрование методом Гронсфельда 
+
+Ключ устанавливается в конструкторе. Для зашифровывания и расшифровывания предназначены методы encrypt и decrypt. \begin{DoxyWarning}{Предупреждения}
+Реализация только для русского языка 
+\end{DoxyWarning}
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classmodAlphaCipher_a247b687296399baaa09f96ce43def048}\label{classmodAlphaCipher_a247b687296399baaa09f96ce43def048}} 
+\index{modAlphaCipher@{modAlphaCipher}!convert@{convert}}
+\index{convert@{convert}!modAlphaCipher@{modAlphaCipher}}
+\doxysubsubsection{\texorpdfstring{convert()}{convert()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily wstring mod\+Alpha\+Cipher\+::convert (\begin{DoxyParamCaption}\item[{const vector$<$ int $>$ \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Преобразование вектора в строку 
+
+В переменную типа \char`\"{}wstring\char`\"{} с именем \char`\"{}result\char`\"{} записывается строка согласно индексам каждой буквы алфавита \char`\"{}num\+Alpha\char`\"{}. Индексы хранятся в векторе типа \char`\"{}int\char`\"{}, который поступил на вход. \begin{DoxyReturn}{Возвращает}
+строка текста типа \char`\"{}wstring\char`\"{} Преобразование вектор-\/строка 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmodAlphaCipher_a354d69bb0e6035f1970be6b559cd9c19}\label{classmodAlphaCipher_a354d69bb0e6035f1970be6b559cd9c19}} 
+\index{modAlphaCipher@{modAlphaCipher}!convert@{convert}}
+\index{convert@{convert}!modAlphaCipher@{modAlphaCipher}}
+\doxysubsubsection{\texorpdfstring{convert()}{convert()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily vector$<$int$>$ mod\+Alpha\+Cipher\+::convert (\begin{DoxyParamCaption}\item[{const wstring \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Преобразование строки в вектор 
+
+В вектор типа \char`\"{}int\char`\"{} с именем \char`\"{}result\char`\"{} записываются числа, которые являются индексами алфавита \char`\"{}num\+Alpha\char`\"{},применяемый для строки, которая поступила на вход. \begin{DoxyReturn}{Возвращает}
+std\+::vector $<$int$>$, в котором хранятся индексы букв сообщения из алфавита \char`\"{}num\+Alpha\char`\"{} Преобразование строка-\/вектор 
+\end{DoxyReturn}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{modAlphaCipher_8h}{mod\+Alpha\+Cipher.\+h}}\end{DoxyCompactItemize}
