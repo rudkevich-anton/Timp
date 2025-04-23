@@ -1,6 +1,6 @@
 /**
 * @file modAlphaCipher.h
-* @author Присяжный Андрей
+* @author Рудккевич Антон
 * @version 1.0
 * @copyright ИБСТ ПГУ
 * @warning Это учебный пример
